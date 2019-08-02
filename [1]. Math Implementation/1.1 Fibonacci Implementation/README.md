@@ -65,4 +65,47 @@ public static int Fibonacci( int n ){
 }
 ```
 
+### Swift
+
+#### 递归
+
+```swift
+func fib(i: Int) -> Int {
+    if i == 0 {
+        return 0
+    }
+
+    if i == 1 {
+        return 1
+    }
+
+    return fib(i - 1) + fib(i - 2)
+}
+```
+
+#### 非递归
+
+```swift
+func fib(i: Int) -> Int {
+    if i == 0 {
+        return 0
+    }
+
+    if i == 1 {
+        return 1
+    }
+
+    var array: [Int] = Array.init(repeating: 0, count: i)
+
+    array[0] = 1
+    array[1] = 1
+
+    for index in 2 ..< i {
+        array[index] = array[index - 1] + array[index - 2]
+    }
+
+    return array[i - 1]
+}
+```
+
 
