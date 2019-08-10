@@ -59,5 +59,20 @@ class Solution {
 }
 ```
 
+### Swift
 
-
+```swift
+func isPowerOfTwo(_ n: Int) -> Bool {
+        if n == 0 {
+            return false
+        }
+        
+        var num: Int = n
+        
+        while num % 2 == 0 {
+            num /= 2
+        }
+        
+        return num == 1 
+    }
+```
